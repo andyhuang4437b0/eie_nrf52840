@@ -1,0 +1,86 @@
+GIT CHEATSHEET
+
+git commit
+Explanation: Saves a snapshot of your staged changes into the local repository history.
+Arguments:
+- No arguments: Opens default text editor to write a multi-line commit message.
+- -m '<message>': Passes a commit message directly without opening an editor.
+
+git branch
+Explanation: Manages repository branches.
+Arguments:
+- No arguments: Lists all local branches and highlights the active branch.
+- <branch-name>: Creates a new branch with the specified name.
+
+git checkout
+Explanation: Moves between different branches or commits in repository history.
+Arguments:
+- <branch-name>: Switches working directory to the target branch.
+- <commit-hash>: Checks out a specific past commit snapshot.
+
+git pull
+Explanation: Fetches updates from a remote repository and merges them into current local branch.
+Arguments:
+- No arguments: Pulls and merges updates from the default tracking branch.
+- <remote> <branch>: Fetches and merges updates specifically from the designated remote and branch.
+
+git push
+Explanation: Uploads local commits to a remote online repository like GitHub.
+Arguments:
+- No arguments: Pushes new commits on current branch to its tracked remote branch.
+- -u <remote> <branch>: Publishes a new branch to the remote for the first time and sets up upstream tracking.
+- <remote> <branch>: Pushes commits from a local branch to a specific remote branch.
+
+git merge
+Explanation: Combines changes from a target branch into active branch.
+Arguments:
+- <branch-name>: Specifies the branch whose commits you want to integrate.
+
+git rebase
+Explanation: Re-applies commits from current branch on top of another base branch.
+Arguments:
+- <branch-name>: Specifies the target upstream branch to base current commits on.
+
+git fetch
+Explanation: Downloads commits, files, and refs from a remote repository without automatically merging.
+Arguments:
+- <remote> <branch>: Fetches data specifically from the designated remote and branch.
+
+git add
+Explanation: Adds modified or untracked files to the staging area.
+Arguments:
+- <file-path>: Path of the file to stage (e.g., doc/2_Version_Control/git_cheatsheet.txt).
+
+git status
+Explanation: Displays working directory state, untracked files (red), and staged changes (green).
+Arguments:
+- No arguments: Displays status summary.
+
+git log
+Explanation: Displays commit history tree with newest commit at top.
+Arguments:
+- No arguments: Shows full commit history list (press 'q' to exit).
+
+git diff
+Explanation: Shows line-by-line differences between working files and last committed state.
+Arguments:
+- No arguments: Compares working directory changes against staging/HEAD.
+
+
+COMMANDS CHANGING FUNCTION BASED ON ARGUMENT COUNT:
+
+1. git branch:
+- 0 Arguments: Lists existing branches.
+- 1 Argument: Creates a new branch.
+
+2. git commit:
+- 0 Arguments: Opens an interactive text editor to write a commit message.
+- 1 Argument (-m): Bypasses the editor and applies the inline message string.
+
+3. git push:
+- 0 Arguments: Pushes changes to an existing tracked remote branch.
+- Arguments (-u origin branch): Creates a new remote branch and configures upstream tracking.
+
+4. git pull:
+- 0 Arguments: Pulls from default tracking branch.
+- 2 Arguments: Pulls from specified remote repository and branch.
