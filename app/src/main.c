@@ -20,8 +20,33 @@ int main(void) {
     return 0;
   }
   printk("Press BTN1 to toggle LED1\n");
-LED_blink(LED1, LED_1HZ);
+LED_blink(LED0, LED_1HZ);
+LED_set(LED1, LED_ON);
+uint8_t duty_cycle = 0;
+
+
+
+
+
+
+
+
+
+
   while (1) {
+    LED_pwm(LED2, duty_cycle);
+    if (duty_cycle == 100){
+
+duty_cycle =0;
+LED_toggle(LED3);
+    } else {
+      duty_cycle ++;
+
+
+
+    }
+
+
     k_msleep(SLEEP_MS);
   }
   return 0;
