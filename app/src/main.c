@@ -19,7 +19,8 @@ int main(void) {
   if (0 > LED_init()) {
     return 0;
   }
-
+  printk("Press BTN1 to toggle LED1\n");
+LED_blink(LED1, LED_1HZ);
   while (1) {
     k_msleep(SLEEP_MS);
   }
